@@ -9,4 +9,9 @@ $(document).ready(function () {
     };
     var blockMsg = "Please be patient, we are fetching all registered users...";
     objCommFunc.makeRequest(dataToSend, blockMsg, buildRegisteredUsersTable);
+    
+    $('#ff-logo-lnk').click(function () {
+        window.location.href = websiteAddress + "home.php";
+    });
+    
 });
