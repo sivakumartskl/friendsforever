@@ -31,6 +31,9 @@
     text-align: center;
     color: #00ff00;
 }
+#alreadyMember, #notAMember {
+    text-align: center;
+}
 .blockMsg, .blockOverlay {
     z-index: 200000 !important;
 }

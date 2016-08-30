@@ -76,7 +76,19 @@ $(document).ready(function () {
             objCommonFuncs.makeRequest(data, message, logResponseHandler);
         }
     });
-
+    
+    $('#alreadyMember').click(function (e) {
+        e.preventDefault();
+        $('#ffRegistrationForm').modal('hide');
+        $('#ffLoginForm').modal('show');
+    });
+    
+    $('#notAMember').click(function (e) {
+        e.preventDefault();
+        $('#ffLoginForm').modal('hide');
+        $('#ffRegistrationForm').modal('show');
+    });
+    
 });
 
 

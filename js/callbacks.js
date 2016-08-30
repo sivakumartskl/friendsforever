@@ -3,9 +3,10 @@ var scrollToDown = true;
 function regResponseHandler(data) {
     if (data.resData.regStatus) {
         $('#ffRegErr').html("");
+        $('#ffRegistrationForm').modal('hide');
+        $('#ffLoginForm').modal('show');
         $('#ffRegSuc').html(data.resData.regMessage);
     } else {
-        $('#ffRegSuc').html("");
         $('#ffRegErr').html(data.resData.regMessage);
     }
 }
@@ -13,11 +14,13 @@ function regResponseHandler(data) {
 function logResponseHandler(data) {
     if (data.resData.logStatus) {
         $('#ffLogErr').html("");
+        $('#ffRegSuc').html("");
         $('#ffLogSuccess').html(data.resData.logMessage);
         window.location.href = websiteAddress + "home.php";
     } else {
         $('#ffLogSuccess').html("");
         $('#ffLogErr').html(data.resData.logMessage);
+        $('#ffRegSuc').html("");
     }
 }
 
@@ -66,7 +69,9 @@ function logoutResponseHandler(data) {
     }
 }
 
-function someMethod(data) {}
+function someMethod(data) {
+    storeShowResponseHandler(data);
+}
 
 function buildRegisteredUsersTable(data) {
     var tableData = data.resData;

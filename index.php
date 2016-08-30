@@ -78,8 +78,8 @@
                                     </div>
                                 </form>
                             </div>
-                            <div id="ffRegErr"class="forms-errors"></div>
-                            <div id="ffRegSuc"class="forms-success"></div>
+                            <div id="ffRegErr"class="forms-errors"></div><br>
+                            <div id="alreadyMember">Already a registered member? <a href="">Login here</a></div>
                         </div>
                     </div>
                 </div>
@@ -114,7 +114,9 @@
                                 </form>
                             </div>
                             <div id="ffLogErr"class="forms-errors"></div>
-                            <div id="ffLogSuccess"class="forms-success"></div>
+                            <div id="ffRegSuc"class="forms-success"></div>
+                            <div id="ffLogSuccess"class="forms-success"></div><br>
+                            <div id="notAMember">Not registered yet? <a href="">Register here</a></div>
                         </div>
                     </div>
                 </div>
