@@ -48,7 +48,7 @@ class ChatClass {
             if($result) {
                 return array(
                     'regStatus' => 1,
-                    'regMessage' => "You have successfully registered with this website. Please close this dialog and click on login."
+                    'regMessage' => "You have successfully registered with this website. Please login above."
                 );
             }
         }
@@ -124,7 +124,7 @@ class ChatClass {
         );
         $msgInsertResult = $this->objDB->storeResultsWithRtrnVal($msgInsertQuery, $msgInsertParams);
         if($msgInsertResult) {
-            $this->getNewMessages($data);
+            return $this->getNewMessages($data);
         }
     }
     
